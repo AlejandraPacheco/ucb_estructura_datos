@@ -24,15 +24,31 @@ public class App
 
         System.out.println(" ====================  ");
 
-        Student student1 = new Student("Juan ");
-        Student student2 = new Student("Pedro ");
-        Student student3 = new Student("Maria ");
+        Student student1 = new Student("Juan");
+        Student student2 = new Student("Pedro");
+        Student student3 = new Student("Maria");
+        Student student4 = new Student("Jose");
 
         SimpleList<Student> list = new SimpleList<>();
         list.add(student1);
         list.add(student2);
         list.add(student3);
         list.print();
+       
+// ---- Pruebas para los ejercicios -------------------------------------------------
+        System.out.println(list.getData(0));
+        System.out.println(list.getData(1));
+        System.out.println(list.getData(2));
+        
+        System.out.println(list.contains(student1));
+        System.out.println(list.contains(student3));
+        System.out.println(list.contains(student4));
+        
+        list.remove(student2);
+        list.print();
+        list.remove(0);
+        list.print();
+// ----------------------------------------------------------------------------------
 
         SimpleList<Date> dateList = new SimpleList<>();
         dateList.add(new Date());
